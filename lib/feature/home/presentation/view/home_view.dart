@@ -4,6 +4,7 @@ import 'package:general_information/feature/category/presentation/view/category_
 import 'package:general_information/feature/category/presentation/widget/category_fragment.dart';
 import 'package:general_information/feature/drawer/presentation/view/drawer_view.dart';
 import 'package:general_information/model/category/category_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeView extends StatefulWidget {
   static const String routeName = 'home_view';
@@ -26,7 +27,9 @@ class _HomeViewState extends State<HomeView> {
       ),
       appBar: AppBar(
         title: Text(
-          selectedCategory == null ? "Home" : selectedCategory!.title,
+          selectedCategory == null
+              ? AppLocalizations.of(context)!.home
+              : selectedCategory!.title,
           style: Theme.of(context).textTheme.labelLarge,
         ),
       ),

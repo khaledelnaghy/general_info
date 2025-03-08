@@ -17,9 +17,8 @@ class AssetsManager {
       'assets/images/entertainment_dark.png';
   static const String generalLightImage = 'assets/images/general_light.png';
   static const String generalDarkImage = 'assets/images/general_dark.png';
-  static const String technologyLightImage =
-      'assets/images/technology_light.png';
-  static const String technologyDarkImage = 'assets/images/technology_Dark.png';
+  static const String technologyLightImage = 'assets/images/technology_light.png';
+  static const String technologyDarkImage = 'assets/images/technology_dark.png';
   static const String searchLightIcon = 'assets/images/search_light_icon.png';
   static const String searchDarkIcon = 'assets/images/search_dark_icon.png';
   static const String homeIcon = 'assets/images/icon_home.png';

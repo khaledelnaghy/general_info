@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:general_information/core/providers/app_lang_provider.dart';
+import 'package:general_information/core/providers/app_theme_provider.dart';
 import 'package:general_information/core/theme/app_theme.dart';
- import 'package:general_information/feature/home/presentation/view/home_view.dart';
+import 'package:general_information/feature/home/presentation/view/home_view.dart';
+import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 // import 'package:timeago/timeago.dart' as timeago;
- void main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-    // timeago.setLocaleMessages('ar', timeago.ArMessages());
-  runApp(const GeneralInformation());
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(
+      create: (context) => AppLangProvider(),
+    ),
+    ChangeNotifierProvider(
+      create: (context) => AppThemeProvider(),
+    ),
+  ], child: const GeneralInformation()));
 }
 
 class GeneralInformation extends StatelessWidget {
@@ -13,16 +24,20 @@ class GeneralInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var langProvider = Provider.of<AppLangProvider>(context);
+      var themeProvider = Provider.of<AppThemeProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: HomeView.routeName,
       routes: {
         HomeView.routeName: (context) => HomeView(),
-       
       },
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: themeProvider.appTheme,
+      locale: Locale(langProvider.appLang),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
     );
   }
 }

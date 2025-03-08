@@ -1,5 +1,5 @@
 import 'package:general_information/core/utils/app_assets.dart';
- 
+
 class CategoryModel {
   String id;
 
@@ -46,7 +46,7 @@ class CategoryModel {
           id: 'technology',
           title: 'Technology',
           imagePath: isDark
-              ? AssetsManager.technologyLightImage
+              ? AssetsManager.technologyLightImage 
               : AssetsManager.technologyDarkImage),
       CategoryModel(
           id: 'science',
