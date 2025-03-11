@@ -3,6 +3,7 @@ import 'package:general_information/core/utils/app_colors.dart';
 import 'package:general_information/feature/category/presentation/view/category_view.dart';
 import 'package:general_information/feature/category/presentation/widget/category_fragment.dart';
 import 'package:general_information/feature/drawer/presentation/view/drawer_view.dart';
+import 'package:general_information/feature/search/presentation/view/search_view.dart';
 import 'package:general_information/model/category/category_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -26,6 +27,20 @@ class _HomeViewState extends State<HomeView> {
         ),
       ),
       appBar: AppBar(
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushReplacementNamed(context,
+                  SearchView.routeName); // استخدام pushReplacementNamed
+              // setState(() {
+              //   Navigator.pushNamed(context, SearchView.routeName);
+              // });
+            },
+            icon: const Icon(
+              Icons.search_outlined,
+            ),
+          ),
+        ],
         title: Text(
           selectedCategory == null
               ? AppLocalizations.of(context)!.home

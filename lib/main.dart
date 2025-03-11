@@ -3,6 +3,7 @@ import 'package:general_information/core/providers/app_lang_provider.dart';
 import 'package:general_information/core/providers/app_theme_provider.dart';
 import 'package:general_information/core/theme/app_theme.dart';
 import 'package:general_information/feature/home/presentation/view/home_view.dart';
+import 'package:general_information/feature/search/presentation/view/search_view.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -31,6 +32,7 @@ class GeneralInformation extends StatelessWidget {
       initialRoute: HomeView.routeName,
       routes: {
         HomeView.routeName: (context) => HomeView(),
+        SearchView.routeName: (context) => SearchView(),
       },
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

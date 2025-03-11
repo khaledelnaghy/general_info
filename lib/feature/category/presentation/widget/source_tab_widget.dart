@@ -3,7 +3,7 @@ import 'package:general_information/core/utils/app_colors.dart';
 import 'package:general_information/feature/category/presentation/widget/source_name_widget.dart';
 import 'package:general_information/feature/news/presentation/widget/news_widget.dart';
 import 'package:general_information/model/source/source_model.dart';
- 
+
 class SourceTabWidget extends StatefulWidget {
   const SourceTabWidget({super.key, required this.sourceList});
 

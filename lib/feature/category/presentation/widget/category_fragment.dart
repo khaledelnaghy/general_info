@@ -8,11 +8,15 @@ import 'package:provider/provider.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 class CategoryFragment extends StatelessWidget {
-  CategoryFragment({super.key, required this.onViewAllClicked});
+  CategoryFragment({
+    super.key,
+    required this.onViewAllClicked,
+  });
   // var categoriesList = CategoryModel.getCategoriesList(true);
 
   Function onViewAllClicked;
 
+// final News ?news;
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
