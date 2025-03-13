@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:general_information/core/utils/app_colors.dart';
-import 'package:general_information/feature/category/presentation/view/category_view.dart';
+import 'package:general_information/feature/category/presentation/view/source_details_view.dart';
 import 'package:general_information/feature/category/presentation/widget/category_fragment.dart';
 import 'package:general_information/feature/drawer/presentation/view/drawer_view.dart';
 import 'package:general_information/feature/search/presentation/view/search_view.dart';
